@@ -329,3 +329,4 @@ contributions are Copyright © by Bjoern Kimminich 2014-2020.
 ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo_400px.png)
 
 Test
+[![Build Status](https://dev.azure.com/AzureEmail24/juiceShop/_apis/build/status/ssoranno.juiceShopTesting?branchName=master)](https://dev.azure.com/AzureEmail24/juiceShop/_build/latest?definitionId=1&branchName=master)
