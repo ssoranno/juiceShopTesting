@@ -1,16 +1,25 @@
-trigger: 
+trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+resources:
+- repo: self
 
-steps:
-- task: Npm@1
-  inputs:
-    command: 'install'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'juiceContainers'
-    repository: 'juiceRepo'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        tags: |
+          $(tag)
