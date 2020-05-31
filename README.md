@@ -330,3 +330,5 @@ contributions are Copyright © by Bjoern Kimminich 2014-2020.
 
 Test
 [![Build Status](https://dev.azure.com/AzureEmail24/juiceShop/_apis/build/status/ssoranno.juiceShopTesting?branchName=master)](https://dev.azure.com/AzureEmail24/juiceShop/_build/latest?definitionId=1&branchName=master)
+
+Test2
