@@ -25,3 +25,10 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+    - task: AzSKSVTs@4
+      inputs:
+        ConnectedServiceNameARM: 'Azure subscription 1 (a94e209d-614b-4e3f-8a8f-56b3b44a2d62)'
+        GenerateMethodParameterSetSelection: 'ResourceGroupName'
+        ResourceGroupName: 'juiceShopTesting'
+        SubscriptionId: 'a94e209d-614b-4e3f-8a8f-56b3b44a2d62'
+        EnableOMSLogging: false
