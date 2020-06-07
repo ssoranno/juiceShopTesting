@@ -25,6 +25,11 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+  - job: Test
+    displayName: Test Azure
+    pool:
+      vmImage: 'windows-latest'
+    steps:
     - task: AzSKSVTs@4
       displayName: Run AzSK SVTs
       inputs:
