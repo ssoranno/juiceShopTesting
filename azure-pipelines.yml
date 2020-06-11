@@ -25,16 +25,16 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-  - job: Test
-    displayName: Test Azure
-    pool:
-      vmImage: 'windows-latest'
-    steps:
-    - task: AzSKSVTs@4
-      displayName: Run AzSK SVTs
-      inputs:
-        ConnectedServiceNameARM: 'Azure subscription 1 (a94e209d-614b-4e3f-8a8f-56b3b44a2d62)'
-        GenerateMethodParameterSetSelection: 'ResourceGroupName'
-        ResourceGroupName: 'juiceShopTesting'
-        SubscriptionId: 'a94e209d-614b-4e3f-8a8f-56b3b44a2d62'
-        EnableOMSLogging: false
+  #- job: Test
+  #  displayName: Test Azure
+  #  pool:
+  #    vmImage: 'windows-latest'
+  #  steps:
+  #  - task: AzSKSVTs@4
+  #    displayName: Run AzSK SVTs
+  #    inputs:
+  #      ConnectedServiceNameARM: 'Azure subscription 1 (a94e209d-614b-4e3f-8a8f-56b3b44a2d62)'
+  #      GenerateMethodParameterSetSelection: 'ResourceGroupName'
+  #      ResourceGroupName: 'juiceShopTesting'
+  #      SubscriptionId: 'a94e209d-614b-4e3f-8a8f-56b3b44a2d62'
+  #      EnableOMSLogging: false
