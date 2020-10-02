@@ -27,6 +27,7 @@ stages:
           $(tag)
 
 
+
   #- job: Test
   #  displayName: Test Azure
   #  pool:
